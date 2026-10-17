@@ -10,4 +10,4 @@
            #:queue #:make-queue #:queue-root #:queue-path #:queue-status #:drop-file #:retry
            #:process-one #:serve
            ;; CLI
-           #:defcommand #:main #:option #:int-option #:flag #:positional #:*valued-options* #:*program*))
+           #:defcommand #:main #:option #:int-option #:flag #:positional #:*valued-options* #:*args* #:*program*))

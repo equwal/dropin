@@ -36,7 +36,7 @@
 (defun help ()
   (format t "usage: ~a COMMAND [args] [options]~2%commands~%" *program*)
   (dolist (c *commands*)
-    (format t "  ~a~20t~a~%~22t~a~%" (first c) (second c) (third c)))
+    (format t "  ~a~@[ ~a~]~24t~a~%" (first c) (and (string/= (second c) "") (second c)) (third c)))
   (format t "~%options~%  --root DIR~20tqueue folder (default $DROPIN_ROOT, else .)~%  --jobs N~20tworkers for watch (default 1)~%  --every S~20tlook again every S seconds even without a new file (default 600)~%~%stages, in order~%")
   (dolist (s *stages*) (format t "  ~(~a~)~20t~a~%" (first s) (second s))))
 
